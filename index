@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OT Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>OT Form</h2>
+        <form id="otForm">
+            <!-- เลือกชื่อผู้กรอก -->
+            <label for="employeeName">Employee Name:</label>
+            <select id="employeeName" required>
+                <option value="">Select an employee</option>
+                <option value="John Doe">John Doe</option>
+                <option value="Jane Smith">Jane Smith</option>
+                <option value="Mike Johnson">Mike Johnson</option>
+            </select>
+
+            <!-- เลือกแผนก -->
+            <label for="department">Department:</label>
+            <select id="department" required>
+                <option value="">Select a department</option>
+                <option value="HR">HR</option>
+                <option value="IT">IT</option>
+                <option value="Sales">Sales</option>
+            </select>
+
+            <!-- กรอกเวลาเริ่มงาน -->
+            <label for="startTime">Start Time:</label>
+            <input type="time" id="startTime" required>
+
+            <!-- กรอกเวลาออกงาน -->
+            <label for="endTime">End Time:</label>
+            <input type="time" id="endTime" required>
+
+            <!-- วันที่ -->
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+
+            <!-- รวมชั่วโมงการทำงาน -->
+            <label for="totalHours">Total Hours:</label>
+            <input type="text" id="totalHours" readonly>
+
+            <!-- ปุ่มบันทึก -->
+            <button type="button" onclick="submitOT()">Save</button>
+        </form>
+    </div>
+
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
